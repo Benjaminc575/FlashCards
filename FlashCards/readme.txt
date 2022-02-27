@@ -9,7 +9,7 @@ Simple FlashCard App that provides a question and an answer when tapped.
 
 ### App Walk-though
 
-<img src=https://imgur.com/JoiJxim width=200><br>
+<img src= "GifRec.gif" width=200><br>
 
 
 
