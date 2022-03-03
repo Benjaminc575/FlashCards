@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     // Allows for the main flashcard to toggle between question and answer.
     @IBAction func didTapOnFlashcard(_ sender: Any) {
         frontLabel.isHidden = !frontLabel.isHidden
-        //frontLabel.isHidden = false
+        
         
     }
     
