@@ -40,7 +40,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="MyO-xh-Bgi" appends="YES" id="2J1-Xr-SfT"/>
+                                    <outletCollection property="gestureRecognizers" destination="xiJ-dd-17e" appends="YES" id="593-e2-okK"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -53,9 +53,10 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="MyO-xh-Bgi">
+                <tapGestureRecognizer delaysTouchesEnded="NO" id="xiJ-dd-17e" userLabel="Tap didTapOnFlashcard">
+                    <eventButtonMask key="buttonMaskRequired" primary="YES" secondary="YES"/>
                     <connections>
-                        <action selector="didTapOnFlashCard:" destination="BYZ-38-t0r" id="UYR-6j-sCg"/>
+                        <action selector="didTapOnFlashcard:" destination="BYZ-38-t0r" id="zKz-s6-ve2"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
