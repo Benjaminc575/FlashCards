@@ -9,7 +9,7 @@ Simple FlashCard App that provides a question and an answer when tapped.
 
 ### App Walk-though
 
-<img src= "https://github.com/Benjaminc575/FlashCards/blob/main/GifRec1.gif?raw=true" width=200><br>
+<img src= "https://github.com/Benjaminc575/FlashCards/blob/main/GifRec2.gif?raw=true" width=200><br>
 
 
 
@@ -22,4 +22,4 @@ Simple FlashCard App that provides a question and an answer when tapped.
 ## Optional
 - [x] Toggle the flashcard between the question side and the answer side
 - [x] Style the question and answer side of the card to better distinguish between the two sides
-- [ ] Add selectable multiple choice answers beneath the card
+- [x] Add selectable multiple choice answers beneath the card
