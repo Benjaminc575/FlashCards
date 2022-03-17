@@ -58,18 +58,34 @@ class ViewController: UIViewController {
         
         
     }
-    
+    //updates the question and answer
+    func updateFlashcard(question: String, answer: String) {
+        frontLabel.text = question
+        backLabel.text = answer
+    }
+    //hides option 1 when tapped
     @IBAction func didTapOptionOne(_ sender: Any) {
         btnOptionOne.isHidden = true
     }
-    
+    //hides option 2 when tapped and displays frontLabel(Answer)
     @IBAction func didTapOptionTwo(_ sender: Any) {
         frontLabel.isHidden = true
     }
-    
+    //hides option 3 when tapped and displays 
     @IBAction func didTapOptionThree(_ sender: Any) {
         btnOptionThree.isHidden = true
         
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        //we know the destination of the segue is the Navigation controller
+        let navigationController = segue.destination as! UINavigationController
+        
+        // We know the Navigation Controller only contains a Creation View Controller
+        let creationController = navigationController.topViewController as! CreationViewController
+        
+        //we set the flashcardController property to self
+        creationController.flashcardsController = self
     }
  
     
