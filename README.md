@@ -5,7 +5,6 @@
 Improved flashcard app by adding a creation screen. Users are able to create a custom flashcard with a question and answer.
 
 ### App Walk-though
-`TODO://` Add the URL to your animated app walk-though `gif` in the image tag below. Make sure the gif actually renders and animates when viewing this README. (☝️ Remove this paragraph after after adding gif)
 
 <img src= "https://github.com/Benjaminc575/FlashCards/blob/main/GifRec3.gif?raw=true" width=200><br>
 
