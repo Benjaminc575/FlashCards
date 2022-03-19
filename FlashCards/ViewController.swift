@@ -15,9 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var card: UIView!
     
     @IBOutlet weak var btnOptionOne: UIButton!
-    
     @IBOutlet weak var btnOptionTwo: UIButton!
-    
     @IBOutlet weak var btnOptionThree: UIButton!
     
     override func viewDidLoad() {
@@ -59,9 +57,14 @@ class ViewController: UIViewController {
         
     }
     //updates the question and answer
-    func updateFlashcard(question: String, answer: String) {
+    func updateFlashcard(question: String, answer: String, extraAnswer1: String?, extraAnswer2: String?) {
         frontLabel.text = question
         backLabel.text = answer
+        
+        btnOptionOne.setTitle(extraAnswer1, for: .normal)
+        btnOptionTwo.setTitle(answer, for: .normal)
+        btnOptionThree.setTitle(extraAnswer2, for: .normal)
+        
     }
     //hides option 1 when tapped
     @IBAction func didTapOptionOne(_ sender: Any) {
@@ -86,6 +89,17 @@ class ViewController: UIViewController {
         
         //we set the flashcardController property to self
         creationController.flashcardsController = self
+        
+        // Set initial values segue's identifier is EditSegue
+        if segue.identifier == "EditSegue" {
+            
+            creationController.initialQuestion = frontLabel.text
+            creationController.initialAnswer = backLabel.text
+            creationController.initialExtraAnswer1 = btnOptionOne.currentTitle
+            creationController.initialExtraAnswer2 = btnOptionThree.currentTitle
+            
+        }
+        
     }
  
     
