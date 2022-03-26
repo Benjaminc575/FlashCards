@@ -11,6 +11,7 @@ struct Flashcard {
     var question: String
     var answer: String
     
+    //TODO: ADD EXTRA ANSWERS TO STRUCT
 }
 
 class ViewController: UIViewController {
@@ -68,7 +69,7 @@ class ViewController: UIViewController {
         
         //adding our initial flashcard if needed
         if flashcards.count == 0 {
-            updateFlashcard(question: "Whats is the Capital of Texas?", answer: "Austin", extraAnswer1: "Dallas", extraAnswer2: "El paso")
+            updateFlashcard(question: "Whats is the Capital of Texas?", answer: "Austin", extraAnswer1: "Dallas", extraAnswer2: "El Paso")
         } else {
             updateLabels()
             updateNextPrevButtons()
@@ -87,6 +88,7 @@ class ViewController: UIViewController {
         
     }
     //updates the question and answer
+    //TODO: FIX EXTRA ANSWERS SO THAT THEY UPDATE
     func updateFlashcard(question: String, answer: String, extraAnswer1: String?, extraAnswer2: String?) {
         let flashcard = Flashcard(question: question, answer: answer)
 
@@ -121,8 +123,12 @@ class ViewController: UIViewController {
         let currentFlashcard = flashcards[currentIndex]
         
         //update labels
-        frontLabel.text = currentFlashcard.question
         backLabel.text = currentFlashcard.answer
+        frontLabel.text = currentFlashcard.question
+
+        //btnOptionOne.setTitle(currentFlashcard.extraAnswer1, for: .normal)
+        //btnOptionTwo.setTitle(currentFlashcard.answer, for: .normal)
+        //btnOptionThree.setTitle(currentFlashcard.extraAnswer2, for: .normal)
         
         
         
