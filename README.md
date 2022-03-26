@@ -2,12 +2,11 @@
 ## Lab 3
 
 ### App Description
-Updated Flashcard app so that Users are able to create and delete flashcards. Flashcards will now be saved even when app is closed. 
+Simple FlashCard App that provides a question and an answer when tapped with the abilitiy to also create multiple choices. Flashcards app also allows you to edit your current flashcard, store a set of flashcards, delete a certain flashcard, and will remember your last set of flashcards every time you open the app.
 
 ### App Walk-though
-`TODO://` Add the URL to your animated app walk-though `gif` in the image tag below. Make sure the gif actually renders and animates when viewing this README. (☝️ Remove this paragraph after after adding gif)
 
-<img src="YOUR_GIF_URL_HERE" width=200><br>
+<img src="https://github.com/Benjaminc575/FlashCards/blob/main/Lab3Gif.gif?raw=true" width=200><br>
 
 
 ## Required
@@ -17,7 +16,8 @@ Updated Flashcard app so that Users are able to create and delete flashcards. Fl
 ## Optional
 - [x] User can delete a flashcard
 - [ ] User can edit existing flashcard
-- [x] User can store multiple choice questions
+- [ ] User can store multiple choice questions
+
 ## Lab 2
 
 ### App Description
