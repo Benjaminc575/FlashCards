@@ -71,7 +71,7 @@ class CreationViewController: UIViewController {
                     let okAction = UIAlertAction(title: "Ok", style: .default)
                     alert.addAction(okAction)
                 
-                } else {
+                    }
                     // Call the function to update the flashcard
                     flashcardsController.updateFlashcard(question: questionText!, answer: answerText!, extraAnswer1: extraAnswerText1!, extraAnswer2: extraAnswerText2!)
                     
@@ -83,5 +83,3 @@ class CreationViewController: UIViewController {
             
             // Call the function to update the flashcard
             
-            
-}
