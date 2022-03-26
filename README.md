@@ -2,7 +2,7 @@
 ## Lab 3
 
 ### App Description
-Updated Flashcard app so that Users are able to create and delete flashcards. Flashcards will now be saved even when app is closed. 
+Simple FlashCard App that provides a question and an answer when tapped with the abilitiy to also create multiple choices. Flashcards app also allows you to edit your current flashcard, store a set of flashcards, delete a certain flashcard, and will remember your last set of flashcards every time you open the app.
 
 ### App Walk-though
 
