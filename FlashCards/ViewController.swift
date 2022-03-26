@@ -10,7 +10,8 @@ import UIKit
 struct Flashcard {
     var question: String
     var answer: String
-    
+    //var extraAnswer1: String
+    //var extraAnswer2: String
     //TODO: ADD EXTRA ANSWERS TO STRUCT
 }
 
@@ -89,7 +90,8 @@ class ViewController: UIViewController {
     }
     //updates the question and answer
     //TODO: FIX EXTRA ANSWERS SO THAT THEY UPDATE
-    func updateFlashcard(question: String, answer: String, extraAnswer1: String?, extraAnswer2: String?) {
+    func updateFlashcard(question: String, answer: String, extraAnswer1: String, extraAnswer2: String) {
+        
         let flashcard = Flashcard(question: question, answer: answer)
 
         //Adding flashcard in the flashcard array
@@ -110,7 +112,7 @@ class ViewController: UIViewController {
         updateLabels()
         
         btnOptionOne.setTitle(extraAnswer1, for: .normal)
-        btnOptionTwo.setTitle(answer, for: .normal)
+        //btnOptionTwo.setTitle(answer, for: .normal)
         btnOptionThree.setTitle(extraAnswer2, for: .normal)
         
         //saves all flashcards to UserDefault
@@ -123,9 +125,8 @@ class ViewController: UIViewController {
         let currentFlashcard = flashcards[currentIndex]
         
         //update labels
-        backLabel.text = currentFlashcard.answer
         frontLabel.text = currentFlashcard.question
-
+        backLabel.text = currentFlashcard.answer
         //btnOptionOne.setTitle(currentFlashcard.extraAnswer1, for: .normal)
         //btnOptionTwo.setTitle(currentFlashcard.answer, for: .normal)
         //btnOptionThree.setTitle(currentFlashcard.extraAnswer2, for: .normal)
