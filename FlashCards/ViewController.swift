@@ -70,7 +70,7 @@ class ViewController: UIViewController {
         
         //adding our initial flashcard if needed
         if flashcards.count == 0 {
-            updateFlashcard(question: "Whats is the Capital of Texas?", answer: "Austin", extraAnswer1: "Dallas", extraAnswer2: "El Paso")
+            updateFlashcard(question: "Whats is the Capital of Texas?", answer: "Austin", extraAnswer1: "Dallas", extraAnswer2: "El Paso",isExisting: false)
         } else {
             updateLabels()
             updateNextPrevButtons()
@@ -90,20 +90,27 @@ class ViewController: UIViewController {
     }
     //updates the question and answer
     //TODO: FIX EXTRA ANSWERS SO THAT THEY UPDATE
-    func updateFlashcard(question: String, answer: String, extraAnswer1: String, extraAnswer2: String) {
+    func updateFlashcard(question: String, answer: String, extraAnswer1: String, extraAnswer2: String, isExisting: Bool) {
         
         let flashcard = Flashcard(question: question, answer: answer)
-
-        //Adding flashcard in the flashcard array
-        flashcards.append(flashcard)
         
-        //Logging to console
-        print("😎 Added new Flashcard")
-        print("😎 Now we have \(flashcards.count) flashcards.")
-        
-        //Update current index
-        currentIndex = flashcards.count - 1
-        print("😎 Our current index is \(currentIndex)")
+        if(isExisting) {
+            //replace existing flashcard
+            print(currentIndex)
+            flashcards[currentIndex] = flashcard
+        } else {
+            //Adding flashcard in the flashcard array
+            flashcards.append(flashcard)
+            
+            //Logging to console
+            print("😎 Added new Flashcard")
+            print("😎 Now we have \(flashcards.count) flashcards.")
+            
+            //Update current index
+            currentIndex = flashcards.count - 1
+            print("😎 Our current index is \(currentIndex)")
+            
+        }
         
         //Update buttons
         updateNextPrevButtons()
@@ -199,7 +206,6 @@ class ViewController: UIViewController {
         
         //update labels
         updateLabels()
-        
         
         //update buttons
         updateNextPrevButtons()

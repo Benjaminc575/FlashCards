@@ -63,17 +63,21 @@ class CreationViewController: UIViewController {
                     let okAction = UIAlertAction(title: "Ok", style: .default)
                     alert.addAction(okAction)
                     
-                } else if (extraAnswerText1 == nil || extraAnswerText1!.isEmpty || extraAnswerText2 == nil || extraAnswerText2!.isEmpty) {
+               /* } else if (extraAnswerText1 == nil || extraAnswerText1!.isEmpty || extraAnswerText2 == nil || extraAnswerText2!.isEmpty) {
                     //creates alert for extra answers
-                    let alert = UIAlertController(title: "Missing Text", message: "You need other answers.", preferredStyle: .alert)
+                    let alert = UIAlertController(title: "Missing Text", message: "You need other answers.", preferredStyle: .aler?8
                     present(alert, animated: true) // presents alert
                     
                     let okAction = UIAlertAction(title: "Ok", style: .default)
                     alert.addAction(okAction)
-                
-                    }
+                */
+                } else {
+                    var isExisting = false
+                    if initialQuestion != nil {
+                        isExisting = true
+                }
                     // Call the function to update the flashcard
-                    flashcardsController.updateFlashcard(question: questionText!, answer: answerText!, extraAnswer1: extraAnswerText1!, extraAnswer2: extraAnswerText2!)
+                    flashcardsController.updateFlashcard(question: questionText!, answer: answerText!, extraAnswer1: extraAnswerText1!, extraAnswer2: extraAnswerText2!, isExisting: isExisting)
                     
                     dismiss(animated: true)
                 }
@@ -83,3 +87,4 @@ class CreationViewController: UIViewController {
             
             // Call the function to update the flashcard
             
+}
