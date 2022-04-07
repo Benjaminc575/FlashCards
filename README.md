@@ -6,8 +6,10 @@ Simple FlashCard App that provides a question and an answer when tapped. Flashca
 
 ### App Walk-though
 
+### iPhone 13 Pro
 <img src="https://github.com/Benjaminc575/FlashCards/blob/main/New%20Gifs/GifRec5.gif?raw=true" width=200><br>
 
+### iPad Mini
 <img src="https://github.com/Benjaminc575/FlashCards/blob/main/New%20Gifs/GifRec6.gif?raw=true" width=200><br>
 
 
