@@ -81,11 +81,77 @@ class ViewController: UIViewController {
         
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        //First start with the flashcard invisible and sligthy smaller in size
+        card.alpha = 0.0
+        card.transform = CGAffineTransform.identity.scaledBy(x: 0.75, y: 0.75)
+        
+        //animation
+        UIView.animate(withDuration: 0.6, delay: 0.5, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [] , animations: {
+            self.card.alpha = 1.0
+            self.card.transform = CGAffineTransform.identity
+        })
+        
+    }
     
     // Allows for the main flashcard to toggle between question and answer.
     @IBAction func didTapOnFlashcard(_ sender: Any) {
-        frontLabel.isHidden = !frontLabel.isHidden
+        flipFlashcard()
         
+        
+    }
+    func flipFlashcard(){
+        
+        UIView.transition(with: card, duration: 0.3, options: .transitionFlipFromRight, animations: {
+            self.frontLabel.isHidden = !self.frontLabel.isHidden
+        })
+        
+    }
+    // Animates the card out
+    func animateCardOut(toRight: Bool) {
+        if(toRight) {
+        UIView.animate(withDuration: 0.3, animations: {
+            self.card.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)
+        }, completion: { finished in
+            
+            //update labels
+            self.updateLabels()
+            
+            //run other animation
+            self.animateCardIn(toRight: toRight)
+        })
+        }else {
+            // Start on left side (don't animate this)
+            card.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)
+            
+            // Animate card going back to original location
+            UIView.animate(withDuration: 0.3) {
+                self.card.transform = CGAffineTransform.identity
+            }
+        }
+    }
+    func animateCardIn(toRight: Bool) {
+        if(toRight) {
+            // Start on right side (don't animate this)
+            card.transform = CGAffineTransform.identity.translatedBy(x: 300.0, y: 0.0)
+            
+            // Animate card going back to original location
+            UIView.animate(withDuration: 0.3) {
+                self.card.transform = CGAffineTransform.identity
+            }
+        } else {
+            UIView.animate(withDuration: 0.3, animations: {
+                self.card.transform = CGAffineTransform.identity.translatedBy(x: 300.0, y: 0.0)
+            }, completion: { finished in
+                // Update labels
+                self.updateLabels()
+                
+                // Run other animation
+                self.animateCardOut(toRight: toRight)
+            })
+        }
         
     }
     //updates the question and answer
@@ -117,10 +183,6 @@ class ViewController: UIViewController {
         
         //update labels
         updateLabels()
-        
-        btnOptionOne.setTitle(extraAnswer1, for: .normal)
-        //btnOptionTwo.setTitle(answer, for: .normal)
-        btnOptionThree.setTitle(extraAnswer2, for: .normal)
         
         //saves all flashcards to UserDefault
         saveAllFlashcardsToDisk()
@@ -179,7 +241,9 @@ class ViewController: UIViewController {
             // in here we know for sure we have a dictionary array
             let savedCards = dictionaryArray.map { dictionary -> Flashcard in
                 return Flashcard(question: dictionary["question"]!, answer: dictionary["answer"]!)
+                
             }
+            
             //put all these cards in our flashcard array
             flashcards.append(contentsOf: savedCards)
         }
@@ -205,10 +269,13 @@ class ViewController: UIViewController {
         currentIndex = currentIndex + 1
         
         //update labels
-        updateLabels()
+        //updateLabels()
         
         //update buttons
         updateNextPrevButtons()
+        
+        //calls the animate card out function
+        animateCardOut(toRight: true)
         
     }
     //prev Button
@@ -222,6 +289,8 @@ class ViewController: UIViewController {
         
         //update buttons
         updateNextPrevButtons()
+        
+        animateCardOut(toRight: false)
         
     }
     //delete button
