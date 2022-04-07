@@ -1,4 +1,28 @@
 ## FlashCards
+## Lab 4
+
+### App Description
+Simple FlashCard App that provides a question and an answer when tapped. Flashcards app also allows you to edit your current flashcard, store a set of flashcards, delete a certain flashcard, and will remember your last set of flashcards every time you open the app. 
+
+### App Walk-though
+
+<img src="https://github.com/Benjaminc575/FlashCards/blob/main/New%20Gifs/GifRec5.gif?raw=true" width=200><br>
+
+<img src="https://github.com/Benjaminc575/FlashCards/blob/main/New%20Gifs/GifRec6.gif?raw=true" width=200><br>
+
+
+## Required
+- [x] User should see the app icon 
+- [x] User should see a splash screen
+- [x] User should see an flip animation when revealing the answer
+- [x] User should see a slide animation when going to the next flashcard
+- [x] User should see a slide animation when going to the previous flashcard
+- [x] Push code to GitHub
+## Optional
+- [x] User should see a nicer flaschard with rounded corners, shadows, and animating when showing the first time
+- [x] User should see all views properly layout when using the app on a phone of different sizes
+- [ ] Correct answer in multiple choice should be random
+
 ## Lab 3
 
 ### App Description
