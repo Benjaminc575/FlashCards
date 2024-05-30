@@ -1,5 +1,5 @@
 ## FlashCards
-## Lab 4
+## Phase 4
 
 ### App Description
 Simple FlashCard App that provides a question and an answer when tapped. Flashcards app also allows you to edit your current flashcard, store a set of flashcards, delete a certain flashcard, and will remember your last set of flashcards every time you open the app. 
@@ -25,7 +25,7 @@ Simple FlashCard App that provides a question and an answer when tapped. Flashca
 - [x] User should see all views properly layout when using the app on a phone of different sizes
 - [ ] Correct answer in multiple choice should be random
 
-## Lab 3
+## Phase 3 
 
 ### App Description
 Simple FlashCard App that provides a question and an answer when tapped with the abilitiy to also create multiple choices. Flashcards app also allows you to edit your current flashcard, store a set of flashcards, delete a certain flashcard, and will remember your last set of flashcards every time you open the app.
@@ -44,7 +44,7 @@ Simple FlashCard App that provides a question and an answer when tapped with the
 - [ ] User can edit existing flashcard
 - [ ] User can store multiple choice questions
 
-## Lab 2
+## Phase 2
 
 ### App Description
 Improved flashcard app by adding a creation screen. Users are able to create a custom flashcard and edit current flashcards. Multiple choice answers can also be created. 
@@ -64,7 +64,7 @@ Improved flashcard app by adding a creation screen. Users are able to create a c
 - [x] User can edit existing flashcard
 - [x] User can add multiple choice answers in the creation screen
 
-## Lab 1
+## Phase 1
 
 ### App Description
 Simple FlashCard App that provides a question and an answer when tapped. 
